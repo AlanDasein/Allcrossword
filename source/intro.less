@@ -1,0 +1,49 @@
+#intro {
+	
+	overflow: hidden; //fix the weird tendency of google plusone button to float outside the box collapsing with the next panel and despite the .clearfix added
+	
+	background: darken(@box-bg, 1%);
+	margin-top: 10px;
+	@media(min-width:@screen-sm) {
+		margin-top: -20px;
+	}
+	
+	h3 {
+		margin: 0 auto 5px auto;
+		letter-spacing: -.75px;
+		font-family: "Roboto";
+	}
+	
+	h5 {
+		margin-bottom: 0;
+	}
+	
+	p {
+		font-family: "PT Sans";
+		color: lighten(@gray-light, 5%);
+	}
+	
+	//facebook like button
+	.facebook {
+		margin: 10px 15px 0 0;
+		float: left;
+		@media(min-width:@screen-sm) {
+			margin: -10px 15px 0 0;
+			float: right;
+		}
+	}
+	
+	//google plus one button
+	.google {
+		margin: 10px 0 0 0;
+		width: 80px;
+		height: 22px;
+		overflow: hidden;
+		float: left;
+		@media(min-width:@screen-sm) {
+			float: right;
+			margin: -10px 0 0 0;
+		}
+	}
+	
+}

@@ -1,0 +1,51 @@
+#list {
+	
+	hr {
+		margin: 15px 0 10px 0;
+	}
+	
+	//paginator
+	menu {
+		margin: 6px 0 0;
+		float: none;
+		@media(min-width:@screen-md) {
+			float: right;
+		}
+	}
+	
+	//pages information
+	.led {
+		padding-top: 7px;
+		text-align: center;
+		@media(min-width:@screen-md) {
+			text-align: left;
+		}
+	}
+	
+	//crossword preview wrapper
+	.item {
+		margin: 10px;
+		width: 171px;
+		display: inline-block;
+		text-align: left;
+		text-transform: capitalize;
+	}
+	
+	//crossword date
+	.date {
+		letter-spacing: .5px;
+		font-size: 85%;
+		color: lighten(@gray-light, 5%);
+	}
+	
+	//crossword author
+	.author {
+		margin-bottom: -3px;
+	}
+	
+	//crossword complexity
+	.level, .date {
+		margin-bottom: -1px;
+	}
+	
+}

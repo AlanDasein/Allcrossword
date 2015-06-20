@@ -1,0 +1,13 @@
+//function to return gradient
+.gradient(@from; @to) {
+	
+	background: @from; /* Old browsers */
+	background: -moz-linear-gradient(top, @from 6%, @from 6%, @to 74%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, @from), color-stop(6%, @from), color-stop(74%, @to)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @from 6%, @from 6%, @to 74%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @from 6%, @from 6%, @to 74%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @from 6%, @from 6%, @to 74%); /* IE10+ */
+	background: linear-gradient(to bottom, @from 6%, @from 6%, @to 74%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@from', endColorstr='@to', GradientType=0); /* IE6-9 */
+
+}

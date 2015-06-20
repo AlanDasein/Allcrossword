@@ -1,0 +1,185 @@
+//set texture image to body
+body {
+	background-image: url(../_assets/texture.png);
+}
+
+//expand sections to fill all available space
+section {
+	margin: 0;
+	@media(min-width:@screen-sm) {
+		margin: 0 -15px 0 -15px;
+	}
+}
+section:last-child {
+	min-height: 68vh;
+}
+
+//reset elements
+menu {
+	padding: 0;
+    line-height: 0;
+}
+
+//remove all borders from anchors that are being focused to show a submenu
+a {
+	outline: none !important;
+}
+
+//remove or modify undesirable features on common elements
+ul {
+	margin: 0;
+}
+
+input[type="text"], select, textarea {
+	height: auto !important;
+	padding: 5px !important;
+	font-size: @font-size-base - 1 !important;
+}
+
+ul.nav-pills a:hover, ul.nav-pills a:focus {
+	color: @gray;
+}
+
+//small inputs
+input.small {
+	width: 40px;
+}
+
+//label inline with small inputs
+label.inline {
+	margin-top: 6px;
+}
+
+//set default divisor
+hr {
+	margin: 0;
+	height: 1px;
+	border: none;
+	border-bottom: 1px dashed darken(@box-bg, 30%);
+}
+
+//justify all paragraphs
+p {
+	.text-justify();
+}
+
+//set default box
+.box {
+	background: @box-bg;
+}
+
+//table emulation hack to achieve a real vertical align
+.wrapper {
+	display: table;
+	.holder {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+//mergin content with header
+.content {
+	margin-top: -17px;
+}
+
+//remove rounded corner from modals and give it some style to text
+.modal-content {
+	border-radius: 0;
+	p {
+		padding-top: 15px;
+		font: @font-size-base + 1 "PT Sans";
+		color: @gray;
+		text-align: left;
+	}
+	textarea {
+		max-width: 100%;
+	}
+}
+
+//ajax loader
+.progress {
+	margin: 0;
+	.progress-bar {
+		width: 100%;
+	}
+}
+
+//content blockquoted
+.blockquote {
+	padding: 15px;
+}
+
+//inline anchors that simulate buttons
+a.button {
+	border: 1px dashed @brand-danger;
+	background: @brand-danger;
+	color: #fff;
+}
+a.button:hover {
+	background: @box-bg;
+	color: @brand-danger;
+}
+
+//general crossword layout
+.blocks {
+	border-left: 1px solid @gray-dark;
+	border-top: 1px solid @gray-dark;
+	span {
+		width: 10px;
+		height: 10px;
+		border: none;
+		border-right: 1px solid @gray-dark;
+		border-bottom: 1px solid @gray-dark;
+	}
+	.empty {
+		background: @gray-dark;
+	}
+	.waiting {
+		background: lighten(@gray-dark, 10%);
+	}
+}
+a.blocks:hover {
+	opacity: .9;
+}
+
+//horizontal and vertical words list
+.captions {
+	margin: 10px 0 0;
+	@media(min-width:@screen-lg) {
+		margin: -40px 0 0 -15px;
+	}
+}
+
+//custom scrollbar
+::-webkit-scrollbar {
+	width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+//utilities to avoid collapsed content
+.full-spacer {
+	height: 24px;
+}
+.spacer {
+	height: 12px;
+}
+.half-spacer {
+	height: 6px;
+}
+
+//make facebook comments responsive
+.fb-comments,
+.fb-comments span,
+.fb-comments span iframe[style] {
+  min-width: 100% !important;
+  width: 100% !important;
+}

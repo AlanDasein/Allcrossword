@@ -1,0 +1,102 @@
+nav {
+	
+	//marge nav and logo
+	margin-top: -9px;
+	
+	//navigation panel button (visible just on mobile)
+	.toggler {
+		margin-top: 10px;
+		padding: 8px;
+		border: 1px solid @bar-border;
+		cursor: pointer;
+		.gradient(darken(@box-bg, 3%); darken(@box-bg, 7%));
+		.glyphicon {
+			margin-top: 1px;
+			font-size: @font-size-base + 2;
+		}
+	}
+	
+	//navigation panel content
+	.bar {
+		border: 1px solid @bar-border;
+		border-top: none;
+		@media(min-width:@screen-sm) {
+			border: none;
+			border-top: 1px solid @bar-border;
+		}
+	}
+	
+	//list item
+	li {
+		width: 100%;
+	}
+	
+	//menu items
+	a {
+		padding: 4px 0 4px 8px;
+		border-bottom: 1px solid @bar-border;
+		.glyphicon {
+			margin: 3px 5px 0 0;
+			font-size: @font-size-base - 2;
+		}
+		.arrow {
+			color: @brand-danger;
+		}
+	}
+	
+	//item highlighted
+	a.highlight {
+		background: @brand-danger;
+		border: none;
+		font: 115% "Courgette";
+		color: #fff;
+	}
+	a.highlight:hover {
+		background: darken(@brand-danger, 10%);
+	}
+	
+	//items behavior to show associated submenu when clicked
+	a:focus + ul.embeed {
+		display: block;
+	}
+	
+	//submenu
+	ul.embeed {
+		display: none;
+	}
+	
+	//this is neccesary to follow the link rather than just closing the submenu
+	ul.embeed:hover {
+		display: block;
+	}
+	
+	//submenu items
+	a.embeed {
+		background: darken(@box-bg, 1%);
+		text-indent: 20px;
+		font-size: 85%;
+	}
+	
+	//sidebar large inputs
+	input.show {
+		margin-top: -3px;
+	}
+	
+	textarea.notes {
+		height: 100px!important;
+		max-width: 100%;
+	}
+	
+	div.notes {
+		line-height: @font-size-base;
+		small {
+			color: @gray-light;
+		}
+	}
+	
+	//buttons group on side bar
+	.options {
+		border-top: 1px solid @bar-border;
+	}
+	
+}
